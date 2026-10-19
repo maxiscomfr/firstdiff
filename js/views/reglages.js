@@ -9,8 +9,8 @@ let installEvt = null;
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); installEvt = e; });
 
 const NOTIFS = [
-  ['retard', 'Clients en retard', 'Ceux qui n\'ont pas été vus depuis le seuil rouge'],
-  ['grosClients', 'Gros clients à revoir', 'Vos meilleurs clients qui passent à l\'orange'],
+  ['retard', 'Clients en retard', 'Ceux qui n\'ont pas été vus depuis le seuil noir'],
+  ['grosClients', 'Gros clients à revoir', 'Vos meilleurs clients qui passent au jaune'],
   ['baisse', 'Baisse de chiffre d\'affaires', 'Plus de 15 % de moins que l\'année d\'avant'],
   ['tarifs', 'Nouveaux tarifs', 'Rappel la semaine où un tarif est ajouté'],
   ['sauvegarde', 'Rappel de sauvegarde', 'Tous les 30 jours'],
@@ -42,8 +42,8 @@ export async function render(root) {
         <p class="small muted" style="margin-top:8px">Point de départ et de retour des tournées.</p></div>
 
       <div class="card"><div class="card-h"><h2>Visites</h2></div>
-        <div class="set"><span class="dot d-warn" style="width:14px;height:14px"></span><div class="grow"><div class="t">Orange après</div><div class="s">Jours sans visite</div></div>${stepper('seuilOrange', 5, 5, 355, ' j')}</div>
-        <div class="set"><span class="dot d-late" style="width:14px;height:14px"></span><div class="grow"><div class="t">Rouge après</div><div class="s">« Pas vu depuis », alerte</div></div>${stepper('seuilRouge', 5, 10, 360, ' j')}</div>
+        <div class="set"><span class="dot d-warn" style="width:14px;height:14px"></span><div class="grow"><div class="t">Jaune après</div><div class="s">Jours sans visite</div></div>${stepper('seuilOrange', 5, 5, 355, ' j')}</div>
+        <div class="set"><span class="dot d-late" style="width:14px;height:14px"></span><div class="grow"><div class="t">Noir après</div><div class="s">« Pas vu depuis », alerte</div></div>${stepper('seuilRouge', 5, 10, 360, ' j')}</div>
         <div class="set"><div class="grow"><div class="t">Clients par jour au maximum</div><div class="s">Pour découper les tournées</div></div>${stepper('maxParJour', 1, 1, 12, '')}</div>
         <div class="set"><div class="grow"><div class="t">Proposer l'hôtel au-delà de</div><div class="s">Distance entre le dernier client et la maison</div></div>${stepper('hotelKm', 10, 30, 600, ' km')}</div>
       </div>

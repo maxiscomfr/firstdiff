@@ -11,7 +11,7 @@ export async function render(root) {
     <div class="steps">
       <a class="stp${d1 ? ' done' : ''}" href="#/reglages"><span class="n">${d1 ? icon('check') : 1}</span><span class="grow"><b>Vos réglages</b><br><span class="small muted">Adresse de départ, départements, seuils de visite</span></span>${icon('next')}</a>
       <a class="stp${d2 ? ' done' : ''}" href="#/import"><span class="n">${d2 ? icon('check') : 2}</span><span class="grow"><b>Importer vos clients</b><br><span class="small muted">Un fichier Excel ou PDF, puis le chiffre d'affaires</span></span>${icon('next')}</a>
-      <a class="stp" href="#/carte"><span class="n">3</span><span class="grow"><b>Voir la carte</b><br><span class="small muted">Vert, orange, rouge : qui aller voir en priorité</span></span>${icon('next')}</a>
+      <a class="stp" href="#/carte"><span class="n">3</span><span class="grow"><b>Voir la carte</b><br><span class="small muted">Bleu, jaune, noir : qui aller voir en priorité</span></span>${icon('next')}</a>
     </div>
     <div class="card" style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
       <div style="flex:1;min-width:220px"><b>Envie de voir avant d'importer ?</b><p class="small muted">Des clients d'exemple sur votre secteur, à retirer en un geste dans les Réglages.</p></div>

@@ -7,8 +7,8 @@ const DEFAULTS = {
   id: 'reglages',
   deps: DEPS_SECTEUR.slice(),
   domicile: null,              // {adresse, lat, lng}
-  seuilOrange: 30,             // jours sans visite avant orange
-  seuilRouge: 60,              // jours sans visite avant rouge
+  seuilOrange: 30,             // jours sans visite avant jaune
+  seuilRouge: 60,              // jours sans visite avant noir
   maxParJour: 3,
   hotelKm: 150,                // au-delà, nuit à l'hôtel proposée
   notifs: { retard: true, grosClients: true, baisse: true, tarifs: true, sauvegarde: true },
