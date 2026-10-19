@@ -12,10 +12,7 @@ Envoyer ce lien à Jérôme. Sur son téléphone : ouvrir le lien, puis *Ajouter
 
 ## Mettre à jour
 
-1. Modifier les fichiers, puis dans `sw.js` changer `VERSION = 'firstdiff-v1'` en `v2`, `v3`…
-2. Sur Netlify, onglet *Deploys*, glisser le nouveau dossier dans la zone de dépôt.
-
-La nouvelle version s'affiche à la deuxième ouverture de l'application.
+Le site Netlify est relié à ce dépôt GitHub : chaque envoi sur la branche `main` est mis en ligne automatiquement. `netlify.toml` change la version du cache hors ligne (`sw.js`) à chaque mise en ligne, il n'y a rien à faire à la main. La nouvelle version s'affiche à la deuxième ouverture de l'application.
 
 ## Données
 
