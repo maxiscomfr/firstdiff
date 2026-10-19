@@ -1,0 +1,5 @@
+# Mise en ligne automatique depuis GitHub : pas de compilation, on publie le dossier tel quel.
+# À chaque mise en ligne, la version du cache hors ligne change pour que les téléphones récupèrent la nouveauté.
+[build]
+  publish = "."
+  command = "sed -i \"s/const VERSION = '[^']*'/const VERSION = 'firstdiff-${COMMIT_REF:-local}'/\" sw.js"
